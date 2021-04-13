@@ -1,0 +1,12 @@
+# 应用名称
+spring:
+  application:
+    name: cloud-order
+
+# 应用服务 WEB 访问端口
+server:
+  port: 8802
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8800/eureka

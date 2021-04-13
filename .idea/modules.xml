@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/cloud-order/cloud-order.iml" filepath="$PROJECT_DIR$/cloud-order/cloud-order.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cloud-product/cloud-product.iml" filepath="$PROJECT_DIR$/cloud-product/cloud-product.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cloud-user-8804/cloud-user-8804.iml" filepath="$PROJECT_DIR$/cloud-user-8804/cloud-user-8804.iml" />
+      <module fileurl="file://$PROJECT_DIR$/eureka-server-8800/euraka-server-8800.iml" filepath="$PROJECT_DIR$/eureka-server-8800/euraka-server-8800.iml" />
+      <module fileurl="file://$PROJECT_DIR$/euraka-server-8800/eureka-server-8800.iml" filepath="$PROJECT_DIR$/euraka-server-8800/eureka-server-8800.iml" />
+    </modules>
+  </component>
+</project>

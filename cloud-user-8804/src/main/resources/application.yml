@@ -1,0 +1,10 @@
+# 应用名称 该名称会注册到Eureka
+spring:
+  application:
+    name: cloud-user-8804
+server:
+  port: 8804
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8800/eureka
