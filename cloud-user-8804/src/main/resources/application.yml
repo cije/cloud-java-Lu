@@ -8,3 +8,6 @@ spring:
         server-addr: localhost:8848
 server:
   port: 8804
+logging:
+  level:
+    com.ce.clouduser8804.feign: debug
