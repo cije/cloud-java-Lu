@@ -1,0 +1,34 @@
+server:
+  port: 9999
+spring:
+  application:
+    # 应用名称
+    name: cloud-gateway
+  # Nacos 服务发现与注册配置，其中子属性 server-addr 指定 Nacos 服务器主机和端口
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+    gateway:
+      discovery:
+        locator:
+          # 开启从注册中心动态创建路由的功能，利用微服务名进行路由
+          enabled: true
+      routes:
+        # 路由id 要求唯一性
+        - id: router_order
+          # 匹配后的路由地址 【目标服务地址】
+          uri: http://localhost:8802
+          predicates:
+            - Path=/order/**
+        - id: router_test_path
+          # lb 协议->  load balancing 启用gateway的负载均衡
+          uri: lb://nacos-user-8804
+          # 断言 匹配规则
+          predicates:
+            - Path=/api/user/**
+          filters:
+            - RewritePath=/api(?<segment>/?.*),$\{segment}
+
+
+

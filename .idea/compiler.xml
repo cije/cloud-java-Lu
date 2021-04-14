@@ -11,9 +11,11 @@
         <module name="eureka-server-8800" />
         <module name="cloud-user-8804" />
         <module name="euraka-server-8800" />
+        <module name="cloud-gateway" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="cloud-gateway" target="1.8" />
       <module name="cloud-order" target="1.8" />
       <module name="cloud-product" target="1.8" />
       <module name="cloud-user-8804" target="1.8" />

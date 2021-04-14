@@ -8,6 +8,7 @@
         <option value="$PROJECT_DIR$/euraka-server-8800/pom.xml" />
         <option value="$PROJECT_DIR$/eureka-server-8800/pom.xml" />
         <option value="$PROJECT_DIR$/cloud-user-8804/pom.xml" />
+        <option value="$PROJECT_DIR$/cloud-gateway/pom.xml" />
       </list>
     </option>
   </component>

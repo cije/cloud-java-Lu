@@ -1,0 +1,8 @@
+###
+GET http://localhost:9999/order/getOrderInfo
+###
+GET  http://localhost:9999/api/user/getProduct
+Authorization: 123
+###
+GET  http://localhost:9999/api/user/getProductMap
+Authorization: cije
