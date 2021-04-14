@@ -2,6 +2,8 @@ package com.ce.cloudorder.controller;
 
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
@@ -21,6 +23,7 @@ import org.springframework.web.client.RestTemplate;
  * @date 2021/4/8 15:51
  */
 @RestController
+@RefreshScope
 public class OrderController {
 
     @Autowired
@@ -36,5 +39,13 @@ public class OrderController {
 
     public String getOrderInfoFallback() {
         return "商品服务失效，请稍后重试~";
+    }
+
+    @Value("${username}")
+    private String username;
+
+    @GetMapping("/order/test")
+    public String test() {
+        return username;
     }
 }
