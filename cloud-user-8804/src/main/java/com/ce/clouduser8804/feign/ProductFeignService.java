@@ -1,5 +1,6 @@
 package com.ce.clouduser8804.feign;
 
+import com.ce.clouduser8804.feign.impl.ProductFeignServiceImpl;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -14,7 +15,7 @@ import java.util.Map;
  * @author c__e
  * @date 2021/4/13 16:28
  */
-@FeignClient("nacos-product")
+@FeignClient(value = "nacos-product", qualifier = "productFeignService", fallback = ProductFeignServiceImpl.class)
 public interface ProductFeignService {
     /**
      * 调用商品服务的getProductById<br/>

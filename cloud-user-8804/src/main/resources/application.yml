@@ -11,3 +11,6 @@ server:
 logging:
   level:
     com.ce.clouduser8804.feign: debug
+feign:
+  hystrix:
+    enabled: true
